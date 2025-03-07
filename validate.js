@@ -1,6 +1,7 @@
 function checkSID() {
   let sid = (document.getElementById("sid").value).trim();
   if (sid.length == 10) {
+	if (sid.length == 10 && /^[0-9]{10}$/.test(sid)) {
     return true;
   } else {
     return false;
